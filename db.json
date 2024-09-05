@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "7944",
+      "name": "jay",
+      "email": "jay@test.com",
+      "city": "junagadh,gujarat",
+      "password": "1452359878"
+    },
+    {
+      "id": "601e",
+      "name": "John Doe",
+      "email": "jay@gmail.com",
+      "city": "Rajkot,gujrat",
+      "password": "1452359878"
+    },
+    {
+      "id": "f63f",
+      "name": "jay",
+      "email": "jay@gmail.com",
+      "city": "junagdh",
+      "password": "1452359878"
+    }
+  ],
+  "items": []
+}

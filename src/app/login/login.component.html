@@ -1,0 +1,43 @@
+<header>
+    <div class="header-container">
+        <div class="logo">JK Electronics</div>
+        <nav class="nav-links">
+            <a routerLink="/header">Home</a>
+            <a href="#">About</a>
+            <a routerLink="/login">Login</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<div class="background-image">
+</div>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form [formGroup]="loginform">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" formControlName="name">
+            <div style="color: red;" *ngIf="submitted && loginform.controls['name'].errors?.['required']">Please Enter Your Name</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" formControlName="email">
+            <div style="color: red;" *ngIf="submitted && loginform.controls['email'].errors?.['required']">Please Enter Your Email</div>
+            <div style="color: red;" *ngIf="touched && loginform.controls['email'].errors?.['pattern']">Please Enter Valid Email</div>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" formControlName="city">
+            <div style="color: red;" *ngIf="submitted && loginform.controls['city'].errors?.['required']">Please Enter Your City</div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" formControlName="password">
+            <div style="color: red;" *ngIf="touched && loginform.controls['password'].errors?.['required']">Please Enter Your Password</div>
+            <div style="color: red;" *ngIf="touched && loginform.controls['password'].errors?.['minlength']">Maximum 8 Characters Required</div>
+        </div>
+        <button type="submit" (click)="login()">Register</button>
+    </form>
+</div>

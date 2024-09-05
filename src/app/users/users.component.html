@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Registration Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let response of userData">
+                <td>{{response.name}}</td>
+                <td>{{response.email}}</td>
+                <td>{{response.city}}</td>
+                <td>{{response.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
